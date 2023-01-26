@@ -1,5 +1,5 @@
 # Dashboard
 
 ### Stacks: ReactJs
-###packages: recharts, ApexChats
+### packages: recharts, ApexChats
 ### Github, Vite-Js
