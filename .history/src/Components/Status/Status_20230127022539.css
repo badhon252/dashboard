@@ -1,0 +1,28 @@
+/* Card css  */
+
+.myCard {
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.myCard_title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.myCard_value {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.myCard_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}

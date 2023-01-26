@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.link {
+    color: rgba(0, 0, 0, 0.534);
+    text-decoration: underline;
+    font-size: 1em;
+    padding: 0;
+}
+
+.link,
+img {
+    cursor: pointer;
+}

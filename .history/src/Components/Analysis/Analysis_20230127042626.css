@@ -1,0 +1,63 @@
+.footer {
+    text-align: center;
+}
+
+#analysis .row .col-md-6 {
+    padding: 0;
+    margin: 1rem;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.874);
+}
+
+#analysis .domainInfo {
+    color: rgba(0, 0, 0, 0.568);
+    font-size: 0.9rem;
+    background-color: #ffffff;
+}
+
+.domainHeader {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+    padding: 0 1rem;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+.threatDomain:nth-child(odd) {
+    background-color: #e8f3ff;
+}
+
+.threatDomain {
+    padding: 0 1rem;
+}
+
+.threatType {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.843);
+}
+
+.destination {
+    color: #1072f8;
+}
+
+
+/* Graph  */
+
+.apexcharts-legend-series:hover {
+    background-color: rgba(0, 0, 0, 0.087);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.domainInfo {
+    background-color: #fff;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.domainInfo .img {
+    transform: rotate(90deg);
+    transform: translateX(-20px);
+}

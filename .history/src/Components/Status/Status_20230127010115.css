@@ -1,0 +1,22 @@
+#status {
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.055);
+    width: 100%;
+}
+
+
+/* Card css  */
+
+.myCard {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.127);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.myCard-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}

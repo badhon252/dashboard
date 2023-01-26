@@ -1,0 +1,16 @@
+/* Card css  */
+
+.myCard {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+
+.myCard_title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
