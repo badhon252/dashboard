@@ -44,10 +44,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           radius={[10, 10, 0, 0]}
         ></Bar>
 
-        <Tooltip
-          content={<CustomTooltip />}
-          cursor={{ fill: "blue", opacity: 0.2 }}
-        />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "blue" }} />
       </BarChart>
     </ResponsiveContainer>
   );

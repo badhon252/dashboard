@@ -1,7 +1,7 @@
 import "../Analysis.css";
 import Graph from "./Graph";
 import { useState } from "react";
-// import ApexCharts from "react-apexcharts";
+import ApexCharts from "react-apexcharts";
 
 const data = [
   { name: "Command & Control Host", value: 10.8 },
@@ -14,8 +14,8 @@ const data = [
 ];
 
 const AnalysisGraph = ({ icon }) => {
-  let values = data.map((e) => e.value);
-  const [inputValues, setInputValues] = useState([...values]);
+  let value = data.map((e) => e.value);
+  const [inputValues, setInputValues] = useState([...value]);
   const [chartOptions, setChartOptions] = useState({
     series: [
       {
@@ -67,14 +67,12 @@ const AnalysisGraph = ({ icon }) => {
         </div>
       </div>
       <div className="threatGraph">
-        {/* importing Graph  */}
         <Graph data={data} />
 
-        {/* input-container */}
-        <div className="input-container">
+        <div>
           {inputValues.map((value, index) => (
             <div key={index}>
-              <label className="mx-2">Value {index + 1}:</label>
+              <label>Value {index + 1}:</label>
               <input
                 type="number"
                 value={value}
@@ -82,9 +80,15 @@ const AnalysisGraph = ({ icon }) => {
               />
             </div>
           ))}
-          <button className="btn btn-outline-dark my-2" onClick={handleClick}>
+          <button className="btn" onClick={handleClick}>
             Update Values
           </button>
+          <ApexCharts
+            options={chartOptions}
+            series={chartOptions.series}
+            type="donut"
+            width="380"
+          />
         </div>
       </div>
     </div>

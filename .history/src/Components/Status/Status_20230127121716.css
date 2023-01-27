@@ -1,7 +1,7 @@
 /* Card css  */
 
 #status .col-md-3 {
-    box-sizing: border-box;
+    padding: 0;
 }
 
 .myCard {

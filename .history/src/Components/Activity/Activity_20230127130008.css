@@ -42,10 +42,10 @@
 }
 
 .activity .label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #000000b3;
-    padding: 0 5px;
+    padding: 2px 5px;
 }
 
 .tooltip-allowed {

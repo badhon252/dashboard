@@ -42,7 +42,18 @@ const ActivityGraph = ({ CustomTooltip }) => {
           stackId="a"
           fill="rgb(255, 19, 129)"
           radius={[10, 10, 0, 0]}
-        ></Bar>
+        >
+          {data.map((entry, index) => (
+            <Cell
+              cursor="pointer"
+              fill={entry.color}
+              width={entry.width}
+              key={`cell-${index}`}
+              onMouseEnter={() => setWidth(index, entry.width + 10)}
+              onMouseLeave={() => setWidth(index, entry.width)}
+            />
+          ))}
+        </Bar>
 
         <Tooltip
           content={<CustomTooltip />}

@@ -9,8 +9,11 @@ import {
 } from "recharts";
 import Data from "../data";
 import "./Activity.css";
+import { useState } from "react";
 
 const ActivityGraph = ({ CustomTooltip }) => {
+  const [hoveredBar, setHoveredBar] = useState(null);
+
   return (
     //? Creating Bars
     <ResponsiveContainer width="100%" aspect="6">
@@ -20,17 +23,26 @@ const ActivityGraph = ({ CustomTooltip }) => {
           dataKey="height"
           stroke="#9a9a9a"
           interval={"preserveStartEnd"}
-          domain={[0, 750]}
+          domain={[0, 250, 500, 750]}
           tickFormatter={(value) => `${value} m`}
         />
-        <CartesianGrid stroke="#e0dfdf" vertical={true} horizontal={false} />
+        <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />
 
         <Bar
           barSize={15}
           dataKey="allowed"
           strokeWidth={1}
           stackId="a"
-          fill="rgb(0, 221, 118)"
+          onMouseEnter={(data, index) => {
+            setHoveredBar(index);
+            var hoveData =
+              hoveredBar === index ? "rgb(0, 255, 149)" : "#8884d8";
+            return hoveData;
+          }}
+          onMouseLeave={() => {
+            setHoveredBar(null);
+          }}
+          fill={hoveData}
           radius={[0, 0, 15, 15]}
           background={{ fill: "#5590ff13" }}
         />
@@ -44,10 +56,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           radius={[10, 10, 0, 0]}
         ></Bar>
 
-        <Tooltip
-          content={<CustomTooltip />}
-          cursor={{ fill: "blue", opacity: 0.2 }}
-        />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "blue" }} />
       </BarChart>
     </ResponsiveContainer>
   );

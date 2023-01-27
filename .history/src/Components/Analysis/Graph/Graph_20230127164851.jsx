@@ -45,7 +45,7 @@ function Graph({ icon }) {
           },
 
           dataLabels: {
-            enabled: true,
+            enabled: false,
           },
         }}
       />

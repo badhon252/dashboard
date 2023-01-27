@@ -7,7 +7,7 @@ export default function Status() {
   return (
     <div id="status" className="container">
       <div className="row">
-        <div className="col-md-3 pe-0">
+        <div className="col-md-3">
           <StatusCard
             title="C2 Threats Detected"
             icon={dotIcon}

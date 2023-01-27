@@ -20,11 +20,21 @@ function Graph({ icon }) {
     <div className="graph">
       <Chart
         type="donut"
-        width={600}
+        width={500}
         series={value}
         options={{
           labels: name,
           color: myColor,
+          legend: {
+            onItemHover: {
+              highlightDataSeries: true,
+            },
+            markers: {
+              onClick: (chart, seriesIndex, opts) => {
+                console.log(`Series - ${seriesIndex} , Opts- ${opts} `);
+              },
+            },
+          },
 
           plotOptions: {
             pie: {
@@ -45,7 +55,7 @@ function Graph({ icon }) {
           },
 
           dataLabels: {
-            enabled: true,
+            enabled: false,
           },
         }}
       />

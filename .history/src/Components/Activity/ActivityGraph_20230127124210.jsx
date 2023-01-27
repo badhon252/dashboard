@@ -20,17 +20,17 @@ const ActivityGraph = ({ CustomTooltip }) => {
           dataKey="height"
           stroke="#9a9a9a"
           interval={"preserveStartEnd"}
-          domain={[0, 750]}
+          domain={[0, 250, 500, 750]}
           tickFormatter={(value) => `${value} m`}
         />
-        <CartesianGrid stroke="#e0dfdf" vertical={true} horizontal={false} />
+        <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />
 
         <Bar
           barSize={15}
           dataKey="allowed"
           strokeWidth={1}
           stackId="a"
-          fill="rgb(0, 221, 118)"
+          fill="rgb(0, 255, 149)"
           radius={[0, 0, 15, 15]}
           background={{ fill: "#5590ff13" }}
         />
@@ -44,10 +44,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           radius={[10, 10, 0, 0]}
         ></Bar>
 
-        <Tooltip
-          content={<CustomTooltip />}
-          cursor={{ fill: "blue", opacity: 0.2 }}
-        />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "blue" }} />
       </BarChart>
     </ResponsiveContainer>
   );

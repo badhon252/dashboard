@@ -9,7 +9,7 @@
 #analysis .row .col-md-6 {
     padding: 0;
     margin: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
 
 .title {
@@ -81,12 +81,4 @@
     padding: 0 1rem;
     overflow: hidden;
     height: 100%;
-}
-
-.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left,
-.apexcharts-legend.apx-legend-position-top.apexcharts-align-left,
-.apexcharts-legend.apx-legend-position-right,
-.apexcharts-legend.apx-legend-position-left {
-    font-size: 1.4rem;
-    font-weight: 600;
 }

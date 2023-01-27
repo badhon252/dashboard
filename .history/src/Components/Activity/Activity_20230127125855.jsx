@@ -7,7 +7,7 @@ export default function Activity() {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
-          <p className="date-label">{label + " Jan 2023"}</p>
+          <p className="date-label">{label + "Jan 2023"}</p>
 
           <div className="d-flex">
             <div className="tooltip-allowed ">

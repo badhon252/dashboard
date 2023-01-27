@@ -23,7 +23,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           domain={[0, 750]}
           tickFormatter={(value) => `${value} m`}
         />
-        <CartesianGrid stroke="#e0dfdf" vertical={true} horizontal={false} />
+        <CartesianGrid stroke="#e0dfdf" vertical={false} horizontal={false} />
 
         <Bar
           barSize={15}
@@ -44,10 +44,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           radius={[10, 10, 0, 0]}
         ></Bar>
 
-        <Tooltip
-          content={<CustomTooltip />}
-          cursor={{ fill: "blue", opacity: 0.2 }}
-        />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "blue" }} />
       </BarChart>
     </ResponsiveContainer>
   );

@@ -1,7 +1,7 @@
 import "../Analysis.css";
 import Graph from "./Graph";
 import { useState } from "react";
-// import ApexCharts from "react-apexcharts";
+import ApexCharts from "react-apexcharts";
 
 const data = [
   { name: "Command & Control Host", value: 10.8 },
@@ -85,6 +85,12 @@ const AnalysisGraph = ({ icon }) => {
           <button className="btn btn-outline-dark my-2" onClick={handleClick}>
             Update Values
           </button>
+          <ApexCharts
+            options={chartOptions}
+            series={chartOptions.series}
+            type="donut"
+            width="380"
+          />
         </div>
       </div>
     </div>

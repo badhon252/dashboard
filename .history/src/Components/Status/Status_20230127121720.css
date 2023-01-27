@@ -1,9 +1,5 @@
 /* Card css  */
 
-#status .col-md-3 {
-    box-sizing: border-box;
-}
-
 .myCard {
     transition: all 0.3s ease-in-out;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

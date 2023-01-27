@@ -28,29 +28,29 @@ const DomainInfo = ({ icon }) => {
       </div>
       {/*Threat Domains*/}
       <DomainThreat
-        timestamp="1 Jan 2023 18:39"
+        timestamp="1 Jan 2023"
         sourseIp="192.168.85.144"
         threatType="Hijacked & Criminal Network"
         destination="www.facebook.com"
       />
       <DomainThreat
-        timestamp="1 Jan 2023 18:39"
+        timestamp="1 Jan 2023"
         threatType="Cryptocurrency"
         sourseIp="192.168.85.144"
         destination="www.microsoft.com"
       />
       <DomainThreat
-        timestamp="1 Jan 2023 18:39"
+        timestamp="1 Jan 2023"
         sourseIp="192.168.85.144"
         destination="www.google.com"
       />
       <DomainThreat
-        timestamp="1 Jan 2023 18:39"
+        timestamp="1 Jan 2023"
         sourseIp="192.168.85.144"
         destination="www.microsoft.com"
       />
       <DomainThreat
-        timestamp="1 Jan 2023 18:39"
+        timestamp="1 Jan 2023"
         threatType="Malware"
         sourseIp="192.168.85.144"
         destination="www.amazon.com"

@@ -16,11 +16,31 @@ function Graph({ icon }) {
   const value = data.map((e) => e.value);
   const myColor = data.map((e) => e.color);
 
+  const [inputValue, setInputValue] = useState("");
+  const chart = useChart();
+
+  const handleClick = () => {
+    chart.updateSeries([
+      {
+        data: [
+          {
+            name: "Current Value",
+            value: inputValue,
+          },
+        ],
+      },
+    ]);
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
     <div className="graph">
       <Chart
         type="donut"
-        width={600}
+        width={500}
         series={value}
         options={{
           labels: name,
@@ -45,7 +65,7 @@ function Graph({ icon }) {
           },
 
           dataLabels: {
-            enabled: true,
+            enabled: false,
           },
         }}
       />

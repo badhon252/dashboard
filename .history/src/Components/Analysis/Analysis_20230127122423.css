@@ -82,11 +82,3 @@
     overflow: hidden;
     height: 100%;
 }
-
-.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left,
-.apexcharts-legend.apx-legend-position-top.apexcharts-align-left,
-.apexcharts-legend.apx-legend-position-right,
-.apexcharts-legend.apx-legend-position-left {
-    font-size: 1.4rem;
-    font-weight: 600;
-}

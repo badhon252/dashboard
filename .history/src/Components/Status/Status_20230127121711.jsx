@@ -7,7 +7,7 @@ export default function Status() {
   return (
     <div id="status" className="container">
       <div className="row">
-        <div className="col-md-3 pe-0">
+        <div className="col-md-3">
           <StatusCard
             title="C2 Threats Detected"
             icon={dotIcon}
@@ -15,7 +15,7 @@ export default function Status() {
             link={null}
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 mx-2">
           <StatusCard
             title="Total Threats Detected"
             icon={dotIcon}
@@ -23,7 +23,7 @@ export default function Status() {
             link={null}
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3mx-2">
           <StatusCard
             title="Blocked Requests"
             icon={dotIcon}

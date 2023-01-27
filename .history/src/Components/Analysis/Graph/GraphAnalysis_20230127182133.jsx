@@ -1,7 +1,7 @@
 import "../Analysis.css";
 import Graph from "./Graph";
 import { useState } from "react";
-// import ApexCharts from "react-apexcharts";
+import ApexCharts from "react-apexcharts";
 
 const data = [
   { name: "Command & Control Host", value: 10.8 },
