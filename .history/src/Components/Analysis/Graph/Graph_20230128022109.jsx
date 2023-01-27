@@ -20,15 +20,6 @@ function Graph() {
       { name: "Botnet Host", data: inputValue6 },
       { name: "Bogons", data: inputValue7 },
     ],
-    colors: [
-      "#0069f7",
-      "#00347b",
-      "#99c3fb",
-      "#3287f8",
-      "#0054c5",
-      "#003f94",
-      "#cce1fd",
-    ],
     chart: {
       type: "donut",
     },
@@ -40,23 +31,22 @@ function Graph() {
             width: 200,
           },
           legend: {
-            position: "right",
+            position: "bottom",
           },
         },
       },
     ],
     labels: [
-      `Command & Control Host:  ${inputValue1} %`,
-      `Anonymization Service:   ${inputValue2} %`,
-      `Compromised C2 Host:     ${inputValue3} %`,
-      `Bad Nameserver IP:       ${inputValue4} %`,
-      `Cryptocurrency:          ${inputValue5} %`,
-      `Botnet Host:             ${inputValue6} %`,
-      `Bogons:                  ${inputValue7} %`,
+      "Command & Control Host",
+      "ANonymization Service",
+      "Compromised C2 Host",
+      "Bad Nameserver IP",
+      "Cryptocurrency",
+      "Botnet Host",
+      "Bogons",
     ],
   });
 
-  // writing functions to listen change and hooked up new values
   const handleChange1 = (e) => {
     setInputValue1(parseInt(e.target.value || 0));
   };
@@ -98,7 +88,6 @@ function Graph() {
   return (
     <div>
       <div className="chart-container">
-        {/* ApexCharts is to render graph  */}
         <ApexCharts
           options={chartOptions}
           series={chartOptions.series}
@@ -106,7 +95,7 @@ function Graph() {
           width="500"
         />
       </div>
-      <div className="input-container my-5">
+      <div className="input-container">
         <input
           value={inputValue1}
           onChange={handleChange1}
@@ -115,7 +104,7 @@ function Graph() {
         <input
           value={inputValue2}
           onChange={handleChange2}
-          placeholder="Anonymization Service"
+          placeholder="ANonymization Service"
         />
         <input
           value={inputValue3}
@@ -142,7 +131,7 @@ function Graph() {
           onChange={handleChange7}
           placeholder="Bogons"
         />
-        <button onClick={handleClick}>Update Chart</button>
+        <button onClick={handleClick()}>Update Chart</button>
       </div>
     </div>
   );

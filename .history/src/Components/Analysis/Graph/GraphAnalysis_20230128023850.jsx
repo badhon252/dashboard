@@ -16,7 +16,7 @@ const AnalysisGraph = ({ icon }) => {
         {/* importing Graph  */}
         <Graph />
 
-        {/* input-container === */}
+        {/* input-container */}
         {/* <div className="input-container">
           {inputValues.map((value, index) => (
             <div key={index}>

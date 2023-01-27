@@ -20,15 +20,6 @@ function Graph() {
       { name: "Botnet Host", data: inputValue6 },
       { name: "Bogons", data: inputValue7 },
     ],
-    colors: [
-      "#0069f7",
-      "#00347b",
-      "#99c3fb",
-      "#3287f8",
-      "#0054c5",
-      "#003f94",
-      "#cce1fd",
-    ],
     chart: {
       type: "donut",
     },
@@ -47,7 +38,7 @@ function Graph() {
     ],
     labels: [
       `Command & Control Host:  ${inputValue1} %`,
-      `Anonymization Service:   ${inputValue2} %`,
+      `ANonymization Service:   ${inputValue2} %`,
       `Compromised C2 Host:     ${inputValue3} %`,
       `Bad Nameserver IP:       ${inputValue4} %`,
       `Cryptocurrency:          ${inputValue5} %`,
@@ -98,7 +89,6 @@ function Graph() {
   return (
     <div>
       <div className="chart-container">
-        {/* ApexCharts is to render graph  */}
         <ApexCharts
           options={chartOptions}
           series={chartOptions.series}
@@ -115,7 +105,7 @@ function Graph() {
         <input
           value={inputValue2}
           onChange={handleChange2}
-          placeholder="Anonymization Service"
+          placeholder="ANonymization Service"
         />
         <input
           value={inputValue3}

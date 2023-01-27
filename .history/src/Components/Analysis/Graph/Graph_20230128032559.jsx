@@ -20,15 +20,6 @@ function Graph() {
       { name: "Botnet Host", data: inputValue6 },
       { name: "Bogons", data: inputValue7 },
     ],
-    colors: [
-      "#0069f7",
-      "#00347b",
-      "#99c3fb",
-      "#3287f8",
-      "#0054c5",
-      "#003f94",
-      "#cce1fd",
-    ],
     chart: {
       type: "donut",
     },
