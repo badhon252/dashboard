@@ -4,6 +4,50 @@ import { useState } from "react";
 // import ApexCharts from "react-apexcharts";
 
 const AnalysisGraph = ({ icon }) => {
+  let values = data.map((e) => e.value);
+  const [inputValues, setInputValues] = useState([...values]);
+  const [chartOptions, setChartOptions] = useState({
+    series: [
+      {
+        name: "Values",
+        data: inputValues,
+      },
+    ],
+    chart: {
+      type: "donut",
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  });
+
+  const handleChange = (e, index) => {
+    const newValues = [...inputValues];
+    newValues[index] = e.target.value;
+    setInputValues(newValues);
+  };
+
+  const handleClick = () => {
+    setChartOptions({
+      ...chartOptions,
+      series: [
+        {
+          name: "Values",
+          data: inputValues,
+        },
+      ],
+    });
+  };
   return (
     <div className="analysisGraph py-3">
       <div className="analysis-heading d-flex justify-content-between p-3">
@@ -14,10 +58,10 @@ const AnalysisGraph = ({ icon }) => {
       </div>
       <div className="threatGraph">
         {/* importing Graph  */}
-        <Graph />
+        <Graph data={data} />
 
         {/* input-container */}
-        {/* <div className="input-container">
+        <div className="input-container">
           {inputValues.map((value, index) => (
             <div key={index}>
               <label className="mx-2">Value {index + 1}:</label>
@@ -31,7 +75,7 @@ const AnalysisGraph = ({ icon }) => {
           <button className="btn btn-outline-dark my-2" onClick={handleClick}>
             Update Values
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

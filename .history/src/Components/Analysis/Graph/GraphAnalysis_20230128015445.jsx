@@ -14,7 +14,7 @@ const AnalysisGraph = ({ icon }) => {
       </div>
       <div className="threatGraph">
         {/* importing Graph  */}
-        <Graph />
+        <Graph data={data} />
 
         {/* input-container */}
         {/* <div className="input-container">

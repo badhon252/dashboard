@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ApexCharts from "react-apexcharts";
+import "./styles.css";
 
-function Graph() {
+function DonutChart() {
   const [inputValue1, setInputValue1] = useState(42.2);
   const [inputValue2, setInputValue2] = useState(10.2);
   const [inputValue3, setInputValue3] = useState(5.7);
@@ -48,26 +49,26 @@ function Graph() {
   });
 
   const handleChange1 = (e) => {
-    setInputValue1(parseInt(e.target.value));
+    setInputValue1(e.target.value);
   };
 
   const handleChange2 = (e) => {
-    setInputValue2(parseInt(e.target.value));
+    setInputValue2(e.target.value);
   };
   const handleChange3 = (e) => {
-    setInputValue3(parseInt(e.target.value));
+    setInputValue3(e.target.value);
   };
   const handleChange4 = (e) => {
-    setInputValue4(parseInt(e.target.value));
+    setInputValue4(e.target.value);
   };
   const handleChange5 = (e) => {
-    setInputValue5(parseInt(e.target.value));
+    setInputValue5(e.target.value);
   };
   const handleChange6 = (e) => {
-    setInputValue6(parseInt(e.target.value));
+    setInputValue6(e.target.value);
   };
   const handleChange7 = (e) => {
-    setInputValue7(parseInt(e.target.value));
+    setInputValue7(e.target.value);
   };
 
   const handleClick = () => {
@@ -87,53 +88,74 @@ function Graph() {
 
   return (
     <div>
-      <div className="chart-container">
-        <ApexCharts
-          options={chartOptions}
-          series={chartOptions.series}
-          type="donut"
-          width="500"
-        />
-      </div>
-      <div className="input-container">
+      <ApexCharts
+        options={chartOptions}
+        series={chartOptions.series}
+        type="donut"
+        width="580"
+        height="auto"
+      />
+
+      <div className="d-flex justify-content-between">
+        <label htmlFor="input1">Command & Control Host: </label>{" "}
         <input
+          type="number"
           value={inputValue1}
+          id="input1"
           onChange={handleChange1}
-          placeholder="Command & Control Host"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input2">ANonymization Service: </label>{" "}
         <input
+          type="number"
           value={inputValue2}
+          id="input2"
           onChange={handleChange2}
-          placeholder="ANonymization Service"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input3">Compromised C2 Host: </label>{" "}
         <input
+          type="number"
           value={inputValue3}
+          id="input3"
           onChange={handleChange3}
-          placeholder="Compromised C2 Host"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input4">Bad Nameserver IP: </label>{" "}
         <input
+          type="number"
           value={inputValue4}
+          id="input4"
           onChange={handleChange4}
-          placeholder="Bad Nameserver IP"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input5">Cryptocurrency: </label>{" "}
         <input
+          type="number"
           value={inputValue5}
+          id="input5"
           onChange={handleChange5}
-          placeholder="Cryptocurrency"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input6">Botnet Host: </label>{" "}
         <input
+          type="number"
           value={inputValue6}
+          id="input6"
           onChange={handleChange6}
-          placeholder="Botnet Host"
-        />
+        />{" "}
+        <br />
+        <label htmlFor="input7">Bogons: </label>{" "}
         <input
+          type="number"
           value={inputValue7}
+          id="input7"
           onChange={handleChange7}
-          placeholder="Bogons"
-        />
-        <button onClick={handleClick}>Update Chart</button>
+        />{" "}
       </div>
+      <br />
+      <button onClick={handleClick}>Update Values</button>
     </div>
   );
 }
-export default Graph;
+export default DonutChart;

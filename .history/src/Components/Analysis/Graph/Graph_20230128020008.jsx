@@ -48,26 +48,26 @@ function Graph() {
   });
 
   const handleChange1 = (e) => {
-    setInputValue1(parseInt(e.target.value));
+    setInputValue1(e.target.value);
   };
 
   const handleChange2 = (e) => {
-    setInputValue2(parseInt(e.target.value));
+    setInputValue2(e.target.value);
   };
   const handleChange3 = (e) => {
-    setInputValue3(parseInt(e.target.value));
+    setInputValue3(e.target.value);
   };
   const handleChange4 = (e) => {
-    setInputValue4(parseInt(e.target.value));
+    setInputValue4(e.target.value);
   };
   const handleChange5 = (e) => {
-    setInputValue5(parseInt(e.target.value));
+    setInputValue5(e.target.value);
   };
   const handleChange6 = (e) => {
-    setInputValue6(parseInt(e.target.value));
+    setInputValue6(e.target.value);
   };
   const handleChange7 = (e) => {
-    setInputValue7(parseInt(e.target.value));
+    setInputValue7(e.target.value);
   };
 
   const handleClick = () => {
@@ -87,14 +87,6 @@ function Graph() {
 
   return (
     <div>
-      <div className="chart-container">
-        <ApexCharts
-          options={chartOptions}
-          series={chartOptions.series}
-          type="donut"
-          width="500"
-        />
-      </div>
       <div className="input-container">
         <input
           value={inputValue1}
@@ -132,6 +124,14 @@ function Graph() {
           placeholder="Bogons"
         />
         <button onClick={handleClick}>Update Chart</button>
+      </div>
+      <div className="chart-container">
+        <ApexCharts
+          options={chartOptions}
+          series={chartOptions.series}
+          type="donut"
+          width="500"
+        />
       </div>
     </div>
   );
