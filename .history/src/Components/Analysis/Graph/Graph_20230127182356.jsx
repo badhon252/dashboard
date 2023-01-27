@@ -20,7 +20,7 @@ function Graph({ icon }) {
     <div className="graph">
       <Chart
         type="donut"
-        width={550}
+        width={500}
         series={value}
         options={{
           labels: name,
