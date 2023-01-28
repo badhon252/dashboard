@@ -110,7 +110,16 @@ function Graph() {
 
   return (
     <div>
-      <div className="input-container mx-5 my-3">
+      <div className="chart-container">
+        {/* ApexCharts is to render graph  */}
+        <ApexCharts
+          options={chartOptions}
+          series={chartOptions.series}
+          type="donut"
+          width="100%"
+        />
+      </div>
+      <div className="input-container m-5">
         <h5 className="text-info mx-auto">
           'Update the Chart' value to see changes & Render Chart!
         </h5>
@@ -152,15 +161,6 @@ function Graph() {
         <button className="btn btn-sm btn-success" onClick={handleClick}>
           Update Chart
         </button>
-      </div>
-      <div className="chart-container">
-        {/* ApexCharts is to render graph  */}
-        <ApexCharts
-          options={chartOptions}
-          series={chartOptions.series}
-          type="donut"
-          width="100%"
-        />
       </div>
     </div>
   );

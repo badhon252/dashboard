@@ -46,13 +46,13 @@ function Graph() {
       },
     ],
     labels: [
-      `Command & Control Host: `,
-      `Anonymization Service: `,
-      `Compromised C2 Host:`,
-      `Bad Nameserver IP: `,
-      `Cryptocurrency: `,
-      `Botnet Host: `,
-      `Bogons: `,
+      `Command & Control Host:  ${inputValue1} %`,
+      `Anonymization Service:   ${inputValue2} %`,
+      `Compromised C2 Host:     ${inputValue3} %`,
+      `Bad Nameserver IP:       ${inputValue4} %`,
+      `Cryptocurrency:          ${inputValue5} %`,
+      `Botnet Host:             ${inputValue6} %`,
+      `Bogons:                  ${inputValue7} %`,
     ],
 
     plotOptions: {
@@ -110,49 +110,6 @@ function Graph() {
 
   return (
     <div>
-      <div className="input-container mx-5 my-3">
-        <h5 className="text-info mx-auto">
-          'Update the Chart' value to see changes & Render Chart!
-        </h5>
-        <input
-          value={inputValue1}
-          onChange={handleChange1}
-          placeholder="Command & Control Host"
-        />
-        <input
-          value={inputValue2}
-          onChange={handleChange2}
-          placeholder="Anonymization Service"
-        />
-        <input
-          value={inputValue3}
-          onChange={handleChange3}
-          placeholder="Compromised C2 Host"
-        />
-        <input
-          value={inputValue4}
-          onChange={handleChange4}
-          placeholder="Bad Nameserver IP"
-        />
-        <input
-          value={inputValue5}
-          onChange={handleChange5}
-          placeholder="Cryptocurrency"
-        />
-        <input
-          value={inputValue6}
-          onChange={handleChange6}
-          placeholder="Botnet Host"
-        />
-        <input
-          value={inputValue7}
-          onChange={handleChange7}
-          placeholder="Bogons"
-        />
-        <button className="btn btn-sm btn-success" onClick={handleClick}>
-          Update Chart
-        </button>
-      </div>
       <div className="chart-container">
         {/* ApexCharts is to render graph  */}
         <ApexCharts
@@ -161,6 +118,51 @@ function Graph() {
           type="donut"
           width="100%"
         />
+      </div>
+      <div className="input-container m-5">
+        <form action="">
+          <h5 className="text-info mx-auto">
+            Update the Chart value to see change & Render Chart!
+          </h5>
+          <input
+            value={inputValue1}
+            onChange={handleChange1}
+            placeholder="Command & Control Host"
+          />
+          <input
+            value={inputValue2}
+            onChange={handleChange2}
+            placeholder="Anonymization Service"
+          />
+          <input
+            value={inputValue3}
+            onChange={handleChange3}
+            placeholder="Compromised C2 Host"
+          />
+          <input
+            value={inputValue4}
+            onChange={handleChange4}
+            placeholder="Bad Nameserver IP"
+          />
+          <input
+            value={inputValue5}
+            onChange={handleChange5}
+            placeholder="Cryptocurrency"
+          />
+          <input
+            value={inputValue6}
+            onChange={handleChange6}
+            placeholder="Botnet Host"
+          />
+          <input
+            value={inputValue7}
+            onChange={handleChange7}
+            placeholder="Bogons"
+          />
+          <button className="btn btn-sm btn-success" onClick={handleClick}>
+            Update Chart
+          </button>
+        </form>
       </div>
     </div>
   );

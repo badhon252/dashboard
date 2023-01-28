@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ApexCharts from "react-apexcharts";
 
 function Graph() {
-  const [inputValue1, setInputValue1] = useState(44);
-  const [inputValue2, setInputValue2] = useState(10);
-  const [inputValue3, setInputValue3] = useState(6);
-  const [inputValue4, setInputValue4] = useState(11);
-  const [inputValue5, setInputValue5] = useState(7);
-  const [inputValue6, setInputValue6] = useState(20);
-  const [inputValue7, setInputValue7] = useState(5);
+  const [inputValue1, setInputValue1] = useState(42.2);
+  const [inputValue2, setInputValue2] = useState(10.2);
+  const [inputValue3, setInputValue3] = useState(5.7);
+  const [inputValue4, setInputValue4] = useState(10.5);
+  const [inputValue5, setInputValue5] = useState(6.7);
+  const [inputValue6, setInputValue6] = useState(19.9);
+  const [inputValue7, setInputValue7] = useState(4.8);
 
   const [chartOptions, setChartOptions] = useState({
     series: [
@@ -46,13 +46,13 @@ function Graph() {
       },
     ],
     labels: [
-      `Command & Control Host: `,
-      `Anonymization Service: `,
-      `Compromised C2 Host:`,
-      `Bad Nameserver IP: `,
-      `Cryptocurrency: `,
-      `Botnet Host: `,
-      `Bogons: `,
+      `Command & Control Host:  ${inputValue1} %`,
+      `Anonymization Service:   ${inputValue2} %`,
+      `Compromised C2 Host:     ${inputValue3} %`,
+      `Bad Nameserver IP:       ${inputValue4} %`,
+      `Cryptocurrency:          ${inputValue5} %`,
+      `Botnet Host:             ${inputValue6} %`,
+      `Bogons:                  ${inputValue7} %`,
     ],
 
     plotOptions: {
@@ -110,10 +110,16 @@ function Graph() {
 
   return (
     <div>
-      <div className="input-container mx-5 my-3">
-        <h5 className="text-info mx-auto">
-          'Update the Chart' value to see changes & Render Chart!
-        </h5>
+      <div className="chart-container">
+        {/* ApexCharts is to render graph  */}
+        <ApexCharts
+          options={chartOptions}
+          series={chartOptions.series}
+          type="donut"
+          width="500"
+        />
+      </div>
+      <div className="input-container m-5">
         <input
           value={inputValue1}
           onChange={handleChange1}
@@ -149,18 +155,7 @@ function Graph() {
           onChange={handleChange7}
           placeholder="Bogons"
         />
-        <button className="btn btn-sm btn-success" onClick={handleClick}>
-          Update Chart
-        </button>
-      </div>
-      <div className="chart-container">
-        {/* ApexCharts is to render graph  */}
-        <ApexCharts
-          options={chartOptions}
-          series={chartOptions.series}
-          type="donut"
-          width="100%"
-        />
+        <button onClick={handleClick}>Update Chart</button>
       </div>
     </div>
   );

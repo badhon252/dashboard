@@ -110,7 +110,7 @@ function Graph() {
 
   return (
     <div>
-      <div className="input-container mx-5 my-3">
+      <div className="input-container m-5">
         <h5 className="text-info mx-auto">
           'Update the Chart' value to see changes & Render Chart!
         </h5>

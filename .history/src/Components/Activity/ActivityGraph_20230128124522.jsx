@@ -21,7 +21,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
           stroke="#9a9a9a"
           interval={"preserveStartEnd"}
           domain={[0, 1000]}
-          tickFormatter={(value) => (value <= 0 ? 0 : value + " m")}
+          tickFormatter={(value) => (value <= 0 ? value : value + " m")}
         />
         <CartesianGrid stroke="#e0dfdf" vertical={true} horizontal={false} />
 

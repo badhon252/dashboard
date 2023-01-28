@@ -45,15 +45,6 @@ function Graph() {
         },
       },
     ],
-    labels: [
-      `Command & Control Host: `,
-      `Anonymization Service: `,
-      `Compromised C2 Host:`,
-      `Bad Nameserver IP: `,
-      `Cryptocurrency: `,
-      `Botnet Host: `,
-      `Bogons: `,
-    ],
 
     plotOptions: {
       pie: {
@@ -110,9 +101,18 @@ function Graph() {
 
   return (
     <div>
-      <div className="input-container mx-5 my-3">
+      <div className="chart-container">
+        {/* ApexCharts is to render graph  */}
+        <ApexCharts
+          options={chartOptions}
+          series={chartOptions.series}
+          type="donut"
+          width="100%"
+        />
+      </div>
+      <div className="input-container m-5">
         <h5 className="text-info mx-auto">
-          'Update the Chart' value to see changes & Render Chart!
+          'Update Chart' to See the Change in Charts!
         </h5>
         <input
           value={inputValue1}
@@ -149,18 +149,7 @@ function Graph() {
           onChange={handleChange7}
           placeholder="Bogons"
         />
-        <button className="btn btn-sm btn-success" onClick={handleClick}>
-          Update Chart
-        </button>
-      </div>
-      <div className="chart-container">
-        {/* ApexCharts is to render graph  */}
-        <ApexCharts
-          options={chartOptions}
-          series={chartOptions.series}
-          type="donut"
-          width="100%"
-        />
+        <button onClick={handleClick}>Update Chart</button>
       </div>
     </div>
   );

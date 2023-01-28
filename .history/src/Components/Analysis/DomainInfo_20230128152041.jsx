@@ -58,19 +58,7 @@ const DomainInfo = ({ icon }) => {
       <DomainThreat
         timestamp="1 Jan 2023 18:39"
         sourseIp="192.168.85.144"
-        threatType="DDOS"
         destination="www.google.com"
-      />
-      <DomainThreat
-        timestamp="1 Jan 2023 18:39"
-        sourseIp="192.168.85.144"
-        destination="www.microsoft.com"
-      />
-      <DomainThreat
-        timestamp="1 Jan 2023 18:39"
-        threatType="Phising"
-        sourseIp="192.168.85.144"
-        destination="www.amazon.com"
       />
       <DomainThreat
         timestamp="1 Jan 2023 18:39"
