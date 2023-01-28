@@ -23,11 +23,11 @@ function Graph() {
     colors: [
       "#006eff",
       "#006dc7",
-      "#83b9ff",
+      "#99c3fb",
       "#3287f8",
       "#0054c5",
       "#003f94",
-      "#506ed1",
+      "#4462c4",
     ],
     chart: {
       type: "donut",

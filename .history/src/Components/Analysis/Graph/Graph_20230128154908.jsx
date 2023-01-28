@@ -27,7 +27,7 @@ function Graph() {
       "#3287f8",
       "#0054c5",
       "#003f94",
-      "#506ed1",
+      "#4a66c4",
     ],
     chart: {
       type: "donut",
