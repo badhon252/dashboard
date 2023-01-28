@@ -22,12 +22,12 @@ function Graph() {
     ],
     colors: [
       "#006eff",
-      "#006dc7",
-      "#99c3fb",
+      "#230083",
+      "#67a9ff",
       "#3287f8",
       "#0054c5",
       "#003f94",
-      "#cce1fd",
+      "#a3c0ff",
     ],
     chart: {
       type: "donut",

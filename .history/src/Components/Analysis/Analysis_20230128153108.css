@@ -85,7 +85,7 @@
 
 .threatGraph input {
     padding: 0;
-    margin: 5px;
+    margin: 0;
 }
 
 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left,
@@ -94,9 +94,9 @@
 .apexcharts-legend.apx-legend-position-left {
     font-size: 1.4rem;
     font-weight: 600;
+    margin: 1rem 0;
 }
 
 .apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
-    margin: 1rem 0;
     top: 0 !important;
 }

@@ -21,8 +21,8 @@ function Graph() {
       { name: "Bogons", data: inputValue7 },
     ],
     colors: [
-      "#006eff",
-      "#006dc7",
+      "#0069f7",
+      "#00347b",
       "#99c3fb",
       "#3287f8",
       "#0054c5",
@@ -60,20 +60,11 @@ function Graph() {
         donut: {
           labels: {
             show: true,
-            // total: {
-            //   show: true,
-            //   fontSize: "22px",
-            //   label: "Total",
-            //   formatter: function (w) {
-            //     return (
-            //       w.globals.seriesTotals.reduce(function (a, b) {
-            //         return a + b;
-            //       }, 0) + " %"
-            //     );
-            //   },
-            // },
+            total: {
+              show: true,
+            },
             name: {
-              show: false,
+              show: true,
             },
           },
         },
@@ -124,7 +115,7 @@ function Graph() {
     <div>
       <div className="input-container mx-5 my-3">
         <h5 className="text-info mx-auto">
-          Update values or simply Click on 'Generate Chart' to see the changes!
+          'Update the Chart' value to see changes & Render Chart!
         </h5>
         <input
           value={inputValue1}
@@ -162,7 +153,7 @@ function Graph() {
           placeholder="Bogons"
         />
         <button className="btn btn-sm btn-success" onClick={handleClick}>
-          Generate Chart
+          Update Chart
         </button>
       </div>
       <div className="chart-container">

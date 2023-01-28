@@ -21,8 +21,8 @@ function Graph() {
       { name: "Bogons", data: inputValue7 },
     ],
     colors: [
-      "#006eff",
-      "#006dc7",
+      "#0069f7",
+      "#00347b",
       "#99c3fb",
       "#3287f8",
       "#0054c5",
