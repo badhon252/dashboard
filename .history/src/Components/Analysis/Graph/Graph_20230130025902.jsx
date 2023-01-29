@@ -127,14 +127,25 @@ function Graph() {
         <h5 className="text-info mx-auto">
           Update values or simply Click on 'Generate Chart' to see the changes!
         </h5>
-        <DonutInput inputValue={inputValue1} handleChange={handleChange1} />
-        <DonutInput inputValue={inputValue2} handleChange={handleChange2} />
-        <DonutInput inputValue={inputValue3} handleChange={handleChange3} />
-        <DonutInput inputValue={inputValue4} handleChange={handleChange4} />
-        <DonutInput inputValue={inputValue5} handleChange={handleChange5} />
-        <DonutInput inputValue={inputValue6} handleChange={handleChange6} />
-        <DonutInput inputValue={inputValue7} handleChange={handleChange7} />
-
+        <DonutInput inputValue={inputValue1} onChange={handleChange1} />
+        <DonutInput inputValue={inputValue2} onChange={handleChange2} />
+        <DonutInput inputValue={inputValue3} onChange={handleChange3} />
+        <DonutInput inputValue={inputValue4} onChange={handleChange4} />
+        <DonutInput inputValue={inputValue5} onChange={handleChange5} />
+        <DonutInput inputValue={inputValue6} onChange={handleChange6} />
+        <DonutInput inputValue={inputValue7} onChange={handleChange7} />
+        
+      
+        <input
+          value={}
+          onChange={}
+          placeholder="Botnet Host"
+        />
+        <input
+          value={}
+          onChange={}
+          placeholder="Bogons"
+        />
         <button className="btn btn-sm btn-success" onClick={handleClick}>
           Generate Chart
         </button>

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import ApexCharts from "react-apexcharts";
-import DonutInput from "./DonutInput";
 
 function Graph() {
-  const [inputValue1, setInputValue1] = useState(10);
-  const [inputValue2, setInputValue2] = useState(44);
-  const [inputValue3, setInputValue3] = useState(5);
-  const [inputValue4, setInputValue4] = useState(21);
-  const [inputValue5, setInputValue5] = useState(7);
-  const [inputValue6, setInputValue6] = useState(11);
-  const [inputValue7, setInputValue7] = useState(6);
+  const [inputValue1, setInputValue1] = useState(0);
+  const [inputValue2, setInputValue2] = useState(0);
+  const [inputValue3, setInputValue3] = useState(0);
+  const [inputValue4, setInputValue4] = useState(0);
+  const [inputValue5, setInputValue5] = useState(0);
+  const [inputValue6, setInputValue6] = useState(0);
+  const [inputValue7, setInputValue7] = useState(0);
 
   const [chartOptions, setChartOptions] = useState({
     series: [
@@ -127,14 +126,41 @@ function Graph() {
         <h5 className="text-info mx-auto">
           Update values or simply Click on 'Generate Chart' to see the changes!
         </h5>
-        <DonutInput inputValue={inputValue1} handleChange={handleChange1} />
-        <DonutInput inputValue={inputValue2} handleChange={handleChange2} />
-        <DonutInput inputValue={inputValue3} handleChange={handleChange3} />
-        <DonutInput inputValue={inputValue4} handleChange={handleChange4} />
-        <DonutInput inputValue={inputValue5} handleChange={handleChange5} />
-        <DonutInput inputValue={inputValue6} handleChange={handleChange6} />
-        <DonutInput inputValue={inputValue7} handleChange={handleChange7} />
-
+        <input
+          value={inputValue1}
+          onChange={handleChange1}
+          placeholder="Command & Control Host"
+        />
+        <input
+          value={inputValue2}
+          onChange={handleChange2}
+          placeholder="Anonymization Service"
+        />
+        <input
+          value={inputValue3}
+          onChange={handleChange3}
+          placeholder="Compromised C2 Host"
+        />
+        <input
+          value={inputValue4}
+          onChange={handleChange4}
+          placeholder="Bad Nameserver IP"
+        />
+        <input
+          value={inputValue5}
+          onChange={handleChange5}
+          placeholder="Cryptocurrency"
+        />
+        <input
+          value={inputValue6}
+          onChange={handleChange6}
+          placeholder="Botnet Host"
+        />
+        <input
+          value={inputValue7}
+          onChange={handleChange7}
+          placeholder="Bogons"
+        />
         <button className="btn btn-sm btn-success" onClick={handleClick}>
           Generate Chart
         </button>
