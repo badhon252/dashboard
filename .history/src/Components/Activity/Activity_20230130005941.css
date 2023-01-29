@@ -90,10 +90,6 @@
     background-color: rgba(251, 0, 71, 0.133);
 }
 
-.recharts-rectangle:hover {
-    fill: blue;
-}
-
-.recharts-layer .recharts-bar-rectangle {
-    fill: blue;
+.recharts-rectangle {
+    fill: #000000b3;
 }

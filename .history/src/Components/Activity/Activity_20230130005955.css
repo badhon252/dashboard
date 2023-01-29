@@ -91,9 +91,5 @@
 }
 
 .recharts-rectangle:hover {
-    fill: blue;
-}
-
-.recharts-layer .recharts-bar-rectangle {
-    fill: blue;
+    fill: #000000b3;
 }

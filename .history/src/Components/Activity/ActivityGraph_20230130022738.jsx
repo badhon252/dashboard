@@ -14,7 +14,6 @@ const ActivityGraph = ({ CustomTooltip }) => {
   const handleBarClick = (data) => {
     console.log(data);
   };
-
   return (
     //? Creating Bars
     <ResponsiveContainer width="100%" aspect="7">
@@ -42,6 +41,8 @@ const ActivityGraph = ({ CustomTooltip }) => {
           strokeWidth={0.6}
         />
         <Bar
+          chartX={100}
+          chartY={200}
           barCategoryGap={10}
           barSize={15}
           dataKey="allowed"
@@ -51,6 +52,8 @@ const ActivityGraph = ({ CustomTooltip }) => {
           background={{ fill: "#5590ff13" }}
         />{" "}
         <Bar
+          chartX={100}
+          chartY={200}
           barCategoryGap="10%"
           barSize={15}
           dataKey="blocked"

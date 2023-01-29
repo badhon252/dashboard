@@ -11,14 +11,10 @@ import Data from "../data";
 import "./Activity.css";
 
 const ActivityGraph = ({ CustomTooltip }) => {
-  const handleBarClick = (data) => {
-    console.log(data);
-  };
-
   return (
     //? Creating Bars
     <ResponsiveContainer width="100%" aspect="7">
-      <BarChart data={Data()} outerRadius={10} onClick={handleBarClick}>
+      <BarChart data={Data()} outerRadius={10}>
         <XAxis
           dataKey="id"
           stroke="#9a9a9a"
@@ -60,7 +56,7 @@ const ActivityGraph = ({ CustomTooltip }) => {
         ></Bar>
         <Tooltip
           content={<CustomTooltip />}
-          cursor={{ fill: "blue", opacity: 0 }}
+          cursor={{ fill: "blue", opacity: 0.2 }}
         />
       </BarChart>
     </ResponsiveContainer>
