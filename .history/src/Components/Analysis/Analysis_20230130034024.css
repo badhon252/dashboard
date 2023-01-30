@@ -1,0 +1,108 @@
+#analysis {
+    overflow: hidden;
+}
+
+.footer {
+    text-align: center;
+}
+
+#analysis .row .col-md-6 {
+    padding: 0;
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.874);
+}
+
+#analysis .domainInfo,
+.analysisGraph {
+    color: rgba(0, 0, 0, 0.568);
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.domainHeader {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+    padding: 0 1rem;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+.threatDomain:nth-child(odd) {
+    background-color: #e8f3ff;
+}
+
+.threatDomain {
+    padding: 0 1rem;
+}
+
+.threatType {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.843);
+}
+
+.destination {
+    color: #1072f8;
+}
+
+.analysis-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.874);
+    padding: 0 1rem;
+}
+
+
+/* Graph  */
+
+.apexcharts-legend-series:hover {
+    background-color: rgba(0, 0, 0, 0.087);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.domainInfo {
+    background-color: #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.img {
+    box-sizing: border-box;
+    transform: rotate(90deg);
+    padding: 0.5rem;
+}
+
+
+/* Graph  */
+
+.graph {
+    background-color: #fff;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.threatGraph input {
+    padding: 0;
+    margin: 5px;
+}
+
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left,
+.apexcharts-legend.apx-legend-position-top.apexcharts-align-left,
+.apexcharts-legend.apx-legend-position-right,
+.apexcharts-legend.apx-legend-position-left {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-right {
+    margin: 1rem 0;
+}

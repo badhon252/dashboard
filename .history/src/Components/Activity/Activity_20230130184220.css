@@ -1,0 +1,95 @@
+.activity {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.activity_header {
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+}
+
+.activity_graph .link {
+    text-align: right;
+}
+
+#months {
+    background-color: #fff;
+    border: 1px solid rgba(120, 111, 111, 0.434);
+    outline: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 1rem;
+    color: #000000b3;
+    cursor: pointer;
+}
+
+.custom-tooltip {
+    background-color: #fff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.activity .date-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000b3;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.activity .label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #000000b3;
+    padding: 0 5px;
+}
+
+
+/*
+
+.tooltip-allowed {
+    padding-right: 1rem;
+    border-right: 1px solid #e4e4e4;
+}
+
+.tooltip-allowed .label:last-child {
+    color: rgb(0, 164, 60);
+    border-radius: 15px;
+    background-color: rgba(113, 251, 0, 0.228);
+}
+
+.tooltip-allowed .label span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(0, 251, 109);
+    color: rgb(0, 251, 92);
+    margin-right: 5px;
+    font-size: 5px;
+}
+
+.tooltip-blocked {
+    padding-left: 1rem;
+}
+
+.tooltip-blocked .label span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(251, 0, 71);
+    color: rgb(251, 0, 71);
+    font-size: 5px;
+    margin-right: 5px;
+}
+
+.tooltip-blocked .label:last-child {
+    color: #000000b3;
+    border-radius: 115px;
+    color: rgb(251, 0, 71);
+    background-color: rgba(251, 0, 71, 0.133);
+}
+*/
