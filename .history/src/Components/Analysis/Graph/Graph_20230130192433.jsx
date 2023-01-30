@@ -22,7 +22,7 @@ function Graph() {
       { name: "Bogons", data: inputValue7 },
     ],
     colors: [
-      "#7743DB",
+      "#C147E9",
       "#FA2FB5",
       "#FF0032",
       "#38E54D",
@@ -37,6 +37,9 @@ function Graph() {
       {
         breakpoint: 480,
         options: {
+          chart: {
+            width: 200,
+          },
           legend: {
             position: "right",
           },

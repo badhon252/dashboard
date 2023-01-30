@@ -28,7 +28,7 @@ function Graph() {
       "#38E54D",
       "#FFC93C",
       "#0014FF",
-      "#00FFF6",
+      "#30E3DF",
     ],
     chart: {
       type: "donut",
@@ -37,6 +37,9 @@ function Graph() {
       {
         breakpoint: 480,
         options: {
+          chart: {
+            width: 200,
+          },
           legend: {
             position: "right",
           },

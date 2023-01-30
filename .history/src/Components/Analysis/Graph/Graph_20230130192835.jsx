@@ -37,6 +37,7 @@ function Graph() {
       {
         breakpoint: 480,
         options: {
+          chart: {},
           legend: {
             position: "right",
           },
